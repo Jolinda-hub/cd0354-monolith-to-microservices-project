@@ -27,7 +27,7 @@ script:
   - docker tag udagram-reverseproxy jolinlie/udagram-reverseproxy
 
 after_success:
-  - docker login -u '$DOCKER_USERNAME' -p '$DOCKER_PASSWORD'
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 
   - docker push jolinlie/udagram-api-feed
   - docker push jolinlie/udagram-api-user
